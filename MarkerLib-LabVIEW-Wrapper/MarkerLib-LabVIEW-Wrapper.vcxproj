@@ -156,6 +156,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>D:\git\OpenGL-Renderengine-with-ImGui\x64\Release\BaseLib.lib;D:\git\OpenGL-Renderengine-with-ImGui\x64\Release\MarkerLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
