@@ -21,6 +21,18 @@ typedef struct {
 } Arr2D_SGL;
 typedef Arr2D_SGL** Arr2D_SGLHdl;
 
+typedef struct {
+	int32 dimSizes[2];
+	double elt[1];
+} Arr2D_DBL;
+typedef Arr2D_DBL** Arr2D_DBLHdl;
+
+typedef struct {
+	int32 dimSize;
+	double elt[1];
+} Arr_DBL;
+typedef Arr_DBL** Arr_DBLHdl;
+
 #include "lv_epilog.h"
 
 #if IsOpSystem64Bit
@@ -31,4 +43,4 @@ typedef Arr2D_SGL** Arr2D_SGLHdl;
 
 extern "C" MARKERLIBDLL_API int32_t refineCorner(const Arr2D_SGLHdl image, float* pointX, float* pointY,int32_t winSize,int32_t zeroZone);
 
-
+extern "C" MARKERLIBDLL_API int32_t undistort(Arr2D_DBLHdl inOutput,const Arr2D_DBLHdl cameraMatrix,const Arr_DBLHdl distCoeffs);

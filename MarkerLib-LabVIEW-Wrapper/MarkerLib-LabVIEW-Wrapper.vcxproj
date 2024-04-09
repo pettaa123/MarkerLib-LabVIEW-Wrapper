@@ -133,7 +133,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>D:\git\OpenGL-Renderengine-with-ImGui\x64\Debug\BaseLib.lib;D:\git\OpenGL-Renderengine-with-ImGui\x64\Debug\MarkerLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\git\OpenGL-Renderengine-with-ImGui\x64\Debug\BaseLib.lib;D:\git\OpenGL-Renderengine-with-ImGui\x64\Debug\MarkerLib.lib;C:\Program Files\National Instruments\LabVIEW 2023\cintools\labview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -156,7 +156,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>D:\git\OpenGL-Renderengine-with-ImGui\x64\Release\BaseLib.lib;D:\git\OpenGL-Renderengine-with-ImGui\x64\Release\MarkerLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\git\OpenGL-Renderengine-with-ImGui\x64\Release\BaseLib.lib;D:\git\OpenGL-Renderengine-with-ImGui\x64\Release\MarkerLib.lib;C:\Program Files\National Instruments\LabVIEW 2023\cintools\labview.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
