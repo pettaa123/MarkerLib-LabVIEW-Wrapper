@@ -43,4 +43,6 @@ typedef Arr_DBL** Arr_DBLHdl;
 
 extern "C" MARKERLIBDLL_API int32_t refineCorner(const Arr2D_SGLHdl image, float* pointX, float* pointY,int32_t winSize,int32_t zeroZone);
 
-extern "C" MARKERLIBDLL_API int32_t undistort(Arr2D_DBLHdl inOutput,const Arr2D_DBLHdl cameraMatrix,const Arr_DBLHdl distCoeffs);
+extern "C" MARKERLIBDLL_API int32_t bilateralFilter(Arr2D_SGLHdl inOutput , int d=9 , const double sigmaColor=150 , const double sigmaSpace=150 );
+
+extern "C" MARKERLIBDLL_API int32_t undistort(Arr2D_DBLHdl inOutput, const Arr2D_DBLHdl cameraMatrix, const Arr_DBLHdl distCoeffs);

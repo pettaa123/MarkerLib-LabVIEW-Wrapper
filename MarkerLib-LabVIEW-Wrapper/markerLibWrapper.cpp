@@ -11,6 +11,32 @@ cv::Mat createMat(T* data, int rows, int cols, int chs = 1) {
 	return mat;
 }
 
+int32_t bilateralFilter(Arr2D_SGLHdl inOutput,const int d, const double sigmaColor, const double sigmaSpace) {
+	try{
+
+		int rows = (*inOutput)->dimSizes[0];
+		int cols = (*inOutput)->dimSizes[1];
+
+		//dimension check
+		if (rows == 0 || cols == 0)
+			return EXIT_FAILURE;
+
+		cv::Mat input = createMat(&(**inOutput).elt[0], rows, cols);
+		cv::Mat output;
+
+		cv::bilateralFilter(input, output, d, sigmaColor, sigmaSpace);
+
+		int elemSize = sizeof((*inOutput)->elt);
+		MoveBlock(output.data, &(*inOutput)->elt[0], rows * cols * elemSize);
+
+	}
+	catch (const std::exception& e) {
+		//log
+		return EXIT_FAILURE;
+	}
+	return EXIT_SUCCESS;
+}
+
 int32_t refineCorner(const Arr2D_SGLHdl image, float* pointX, float* pointY, int32_t winSize,int32_t zeroZone) {
 	try {
 		BaseLib::STBimage stbDummy;
